@@ -1,0 +1,427 @@
+String Level 1
+Sol 1.
+/*
+* Ques1:
+* WAP to accept a String from User and Display it Back on Screen
+*/
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+public class Ques1 {
+public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
+String str = sc.nextLine();
+System.out.println(str);
+}
+}
+Sol 2.
+/*
+* 2. WAP to accept the First name , Middle Name and Last Name of a person and
+display full name
+* and Short Name (eq- Amar Kumar Singh- A.K.S)
+*/
+import java.util.*;
+public class Ques2 {
+public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
+String fname = sc.nextLine();
+String midname = sc.nextLine();
+String lname = sc.nextLine();
+System.out.println(fname + " " + midname + " " + lname);
+System.out.println(fname.charAt(0) + "." + midname.charAt(0) + "." +
+lname.charAt(0));
+}
+}
+Sol . 3
+/*
+* 3. WAP to accept a String and Count number of Capital letters present in it.
+* (eq- ComPuter - 2)
+*/
+import java.util.*;
+import java.lang.*;
+public class Ques3 {
+public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
+String string = sc.nextLine();
+int count = 0;
+for(int i = 0; i < string.length(); i++){
+if(Character.isUpperCase(string.charAt(i)))
+count++;
+}
+System.out.println(count);
+}
+}
+Sol 4.
+/*
+* 4. WAP to accept a string and count number of Vowels present in it
+*/
+import java.util.Scanner;
+public class Ques4 {
+public static void main(String[] args) {
+int count = 0;
+System.out.println("Enter:");
+Scanner sc = new Scanner(System.in);
+String str = sc.nextLine();
+for (int i = 0; i < str.length(); i++) {
+char ch = str.charAt(i);
+if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' || ch
+== ' ') {
+count++;
+}
+}
+System.out.println(count);
+}
+}
+Sol 5.
+//5.
+WAP to
+accept
+a
+string
+and
+count
+number
+of
+Words
+Present
+in
+it.(eq-
+Amar
+Singh--
+2)
+package LogicBuilding;
+import java.util.Scanner;
+public class Ques5 {
+public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
+String str = sc.nextLine();
+String[] arr = str.split(" ");
+System.out.println(arr.length);
+}
+}
+Sol 6.
+/*
+* 6. WAP of Java String Comparison 2 String
+*/
+import java.util.Scanner;
+public class Ques6 {
+public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
+String s1 = sc.nextLine();
+String s2 = sc.nextLine();
+if(s1.equalsIgnoreCase(s2))
+System.out.println("Strings are Equal");
+else
+System.out.println("Strings are Not Equal");
+}
+}
+Sol 7.
+/*
+* 7. WAP to accept a day name and display the Day number.(eq- Monday --1)
+*/
+import java.util.Scanner;
+public class Ques7 {
+public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
+String str = sc.nextLine();
+switch(str)
+{
+case "Monday":
+System.out.println(str+":1");
+break;
+case "Tuesday":
+System.out.println(str+":2");
+break;
+case "Wednesday":
+System.out.println(str+":3");
+break;
+case "Thursday":
+System.out.println(str+":4");
+break;
+case "Friday":
+System.out.println(str+"5");
+break;
+case "Saturday":
+System.out.println(str+"6");
+break;
+case "Sunday":
+System.out.println(str+"7");
+break;
+}
+}
+}
+Sol 8.
+/*
+* 8. WAP to accept a String and Convert the case of each alphabet present in
+it.(eq- JaVa---jAvA)
+*/
+import java.util.Scanner;
+public class Ques8 {
+public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
+String str = sc.nextLine();
+StringBuffer newStr = new StringBuffer(str);
+int ln = str.length();
+for (int i = 0; i < ln; i++) {
+if (Character.isLowerCase(str.charAt(i))) {
+newStr.setCharAt(i, Character.toUpperCase(str.charAt(i)));
+} else if (Character.isUpperCase(str.charAt(i))) {
+newStr.setCharAt(i, Character.toLowerCase(str.charAt(i)));
+}
+}
+System.out.println(newStr);
+}
+}
+Sol 9.
+/*
+9. WAP to accept word and check if it is palindrome
+*/
+import java.util.Scanner;
+public class Ques9 {
+public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
+String str = sc.nextLine();
+int l = 0;
+int n = str.length() - 1;
+// Keep comparing characters while they are same
+while (n > l) {
+if (str.charAt(l++) != str.charAt(n--)) {
+System.out.println("String is not Palindrome");
+return;
+}
+}
+System.out.println("String is Palindrome");
+}
+}
+Sol 10.
+/*
+10. WAP of SubString (AMAR SINGH--- R SINGH)
+*/
+import java.util.Scanner;
+public class Ques10 {
+public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
+String str = sc.nextLine();
+int len = str.length();
+String sub = str.substring(3, len);
+System.out.println(sub);
+}
+}
+Sol 11.
+import
+java.util.Scanner;
+public class Ques11 {
+static boolean isVowel(char c){
+return (c == 'A' || c == 'E' || c == 'I' || c == 'O' || c ==
+'U'
+|| c == 'a' || c == 'e' || c == 'i' || c == 'o' || c
+== 'u');
+}
+public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
+String str = sc.nextLine();
+int index = -1;
+for(int i = 0; i < str.length(); i++){
+if(isVowel(str.charAt(i))){
+index = i;
+break ;
+}
+}
+if (index == -1)
+System.out.println("PigLatin is not possible");
+System.out.println(str.substring(index) + str.substring(0,
+index)+ "ay");
+}
+}
+Sol 12.
+import
+java.util.Scanner;
+public class Ques12 {
+public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
+String str = sc.nextLine();
+if (str.startsWith("Mr")) {
+System.out.println("Male");
+} else if (str.startsWith("Miss")) {
+System.out.println("Female");
+} else if (str.startsWith("Mrs")) {
+System.out.println("Married Female");
+} else if (str.endsWith("Kumari")) {
+System.out.println("Female");
+} else {
+System.out.println("Cannot Determine");
+}
+}
+}
+Sol 13.
+import
+java.util.Scanner;
+public class Ques13 {
+public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
+String str1 = sc.nextLine();
+String str2 = sc.nextLine();
+if (str1.compareTo(str2) > 0) {
+System.out.println(str2 + " should come firstRohit");
+}
+if (str1.compareTo(str2) == 0) {
+System.out.println("Both strings are lexicographically
+equal");
+} else {
+System.out.println("String are in Lexicographic Order");
+}
+}
+}
+Sol 14.
+import
+java.util.Scanner;
+/**
+public class Ques14 {
+public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
+String str = sc.nextLine();
+str = str.replace("15 August", "26 January");
+str = str.replace("Independence", "Republic");
+System.out.println(str);
+}
+}
+Sol 15
+import
+java.util.Scanner;
+public class Ques15 {
+public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
+String str = sc.nextLine();
+str = str.trim();
+System.out.println(str);
+}
+}
+Sol 16.
+import
+java.util.Scanner;
+public class Ques16 {
+static boolean vowels(char c) {
+return (c == 'A' || c == 'E' || c == 'I' || c == 'O' || c ==
+'U'
+|| c == 'a' || c == 'e' || c == 'i' || c == 'o' || c
+== 'u');
+}
+public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
+String[] str = new String[5];
+int i;
+for (i = 0; i < 5; i++) {
+str[i] = sc.nextLine();
+}
+System.out.println("Names that starts with vowels are ");
+for (i = 0; i < 5; i++) {
+if (vowels(str[i].charAt(0))) {
+System.out.println(str[i]);
+}
+}
+}
+}
+Sol 17.
+import
+java.util.Scanner;
+public class Ques17 {
+public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
+String str = sc.nextLine();
+char ch,c;
+for (int i = 0; i < str.length(); i++) {
+ch = str.charAt(i);
+if (Character.isLowerCase(ch)) {
+c = Character.toUpperCase(ch);
+str = str.replace(ch, c);
+}
+else if(Character.isUpperCase(ch)){
+c = Character.toLowerCase(ch);
+str = str.replace(ch, c);
+}
+}
+System.out.println(str);
+}
+}
+Sol 19.
+import
+java.util.Scanner;
+public class Ques19 {
+public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
+String str = sc.nextLine();
+String[] arr = str.split(" ");
+String s = "";
+for (int i = 0; i < arr.length; i++) {
+arr[i] = Character.toUpperCase(arr[i].charAt(0)) +
+arr[i].substring(1);
+}
+for (int i = 0; i < arr.length; i++) {
+s += arr[i] + " ";
+}
+System.out.println(s);
+}
+}
+Sol 20.
+import
+java.util.Scanner;
+public class Ques20 {
+public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
+String str = sc.nextLine();
+if(str.length()>5)
+System.out.println(str);
+else
+System.out.println("String length is smaller than 5");
+}
+}
+Sol 21.
+import
+java.util.Scanner;
+public class Ques21 {
+static boolean checkPalindrome(String word) {
+// converting the string to lowercase inorder to avoid
+confusion like Arora, etc
+word = word.toLowerCase();
+int n = word.length() - 1;
+for (int i = 0; i < n; i++, n--) {
+if (word.charAt(i) != word.charAt(n)) {
+return false;
+}
+}
+return true;
+}
+public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
+String str = sc.nextLine();
+String[] array = str.split(" ");
+for (String word : array) {
+if (checkPalindrome(word)) {
+System.out.println(word);
+}
+}
+}
+}
+Sol 22.
+import
+java.util.Scanner;
+public class Ques22 {
+static boolean checkDouble(String word){
+int count = 0;
+for(int i = 0; i < word.length()-1; i++){
+if(word.charAt(i) == word.charAt(i+1))
+return true;
+}
+return false;
+}
+public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
+String str = sc.nextLine();
+String[] array = str.split(" ");
+for (String word : array) {
+if (checkDouble(word)) {
+System.out.println(word);
+}
+}
+}
+}
